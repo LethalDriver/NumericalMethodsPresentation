@@ -44,11 +44,13 @@ print("Analytic result:")
 print(f" Intercept: {analytic_intercept:.2f}, slope: {analytic_slope:.2f}")
 print("Empirical result:")
 print(f" Intercept: {best_intercept:.2f}, slope: {best_slope:.2f}")
-print(f"Computation time for resolution {resolution}: {end_time - start_time:.2f} seconds")
 
 
 # Step 6: Test different resolutions
 for resolution in [20, 50, 100, 500]:
+    
+    
+    
     start_time = time.time()
     best_intercept, best_slope, sse_grid, intercepts, slopes = grid_search(
         x, y, [20, 25], [3.5, 4.0], resolution)
